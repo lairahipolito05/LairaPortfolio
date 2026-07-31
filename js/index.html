@@ -1,0 +1,565 @@
+<!DOCTYPE html>
+
+<html lang="en">
+
+<head>
+
+  <meta charset="UTF-8" />
+
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+
+  <meta name="description" content="Portfolio of Laira T. Hipolito – Full Stack Developer" />
+
+  <title>Laira T. Hipolito | Full Stack Developer</title>
+
+  <link rel="stylesheet" href="css/style.css" />
+
+  <link rel="preconnect" href="https://fonts.googleapis.com" />
+
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+
+  <link href="https://fonts.googleapis.com/css2?family=Inter:wght@300;400;500;600;700&family=Fira+Code:wght@400;500&display=swap" rel="stylesheet" />
+
+</head>
+
+<body>
+
+ 
+
+  <!-- ── Navigation ── -->
+
+  <nav class="nav" id="navbar">
+
+    <div class="nav__container">
+
+      <a class="nav__logo" href="#hero">LTH</a>
+
+      <button class="nav__toggle" id="navToggle" aria-label="Toggle menu">
+
+        <span></span><span></span><span></span>
+
+      </button>
+
+      <ul class="nav__links" id="navLinks">
+
+        <li><a href="#about">About</a></li>
+
+        <li><a href="#skills">Skills</a></li>
+
+        <li><a href="#experience">Experience</a></li>
+
+        <li><a href="#projects">Projects</a></li>
+
+        <li><a href="#contact">Contact</a></li>
+
+      </ul>
+
+    </div>
+
+  </nav>
+
+ 
+
+  <!-- ── Hero ── -->
+
+  <section class="hero" id="hero">
+
+    <div class="hero__content">
+
+      <p class="hero__greeting">Hi, I'm</p>
+
+      <h1 class="hero__name">Laira T. Hipolito</h1>
+
+      <h2 class="hero__title">Full Stack Developer</h2>
+
+      <p class="hero__tagline">I build clean, performant web apps and AI-enabled solutions from concept to deployment.</p>
+
+      <div class="hero__cta">
+
+        <a href="#projects" class="btn btn--primary">View My Work</a>
+
+        <a href="#contact" class="btn btn--outline">Get In Touch</a>
+
+      </div>
+
+    </div>
+
+    <div class="hero__scroll" aria-hidden="true">
+
+      <div class="hero__scroll-line"></div>
+
+    </div>
+
+  </section>
+
+ 
+
+  <!-- ── About ── -->
+
+  <section class="section" id="about">
+
+    <div class="container">
+
+      <h2 class="section__title">About <span>Me</span></h2>
+
+      <div class="about__grid">
+
+        <div class="about__image-wrap">
+
+          <img src="images/profile.png" alt="Laira T. Hipolito" class="about__photo" />
+
+        </div>
+
+        <div class="about__text">
+
+          <p>
+
+            Hello! I'm <strong>Laira</strong>, a passionate Full Stack Developer with a knack for
+
+            turning ideas into elegant digital experiences. I enjoy working across the entire
+
+            stack — from crafting pixel-perfect UIs to architecting scalable back-end services.
+
+          </p>
+
+          <p>
+
+            When I'm not coding, you'll find me exploring new technologies, contributing to
+
+            open-source projects, or building AI-assisted tools and cloud-ready solutions for clients.
+
+            I believe great software is built at the intersection of technical excellence and
+
+            human-centred design.
+
+          </p>
+
+          <a href="cv.html" target="_blank" rel="noopener" class="btn btn--primary">Download CV</a>
+
+        </div>
+
+      </div>
+
+    </div>
+
+  </section>
+
+ 
+
+  <!-- ── Skills ── -->
+
+  <section class="section section--alt" id="skills">
+
+    <div class="container">
+
+      <h2 class="section__title">My <span>Skills</span></h2>
+
+      <div class="skills__grid">
+
+ 
+
+        <div class="skill-card">
+
+          <h3 class="skill-card__category">Frontend</h3>
+
+          <ul class="skill-card__list">
+
+            <li>HTML5 / CSS3</li>
+
+            <li>JavaScript (ES6+)</li>
+
+            <li>React / Next.js</li>
+
+            <li>TypeScript</li>
+
+            <li>Tailwind CSS</li>
+
+          </ul>
+
+        </div>
+
+ 
+
+        <div class="skill-card">
+
+          <h3 class="skill-card__category">Backend</h3>
+
+          <ul class="skill-card__list">
+
+            <li>Node.js / Express</li>
+
+            <li>Python / Django</li>
+
+            <li>REST APIs</li>
+
+            <li>GraphQL</li>
+
+            <li>PostgreSQL / MySQL</li>
+
+            <li>SQL</li>
+
+            <li>GenAI APIs / LLM Integration</li>
+
+          </ul>
+
+        </div>
+
+ 
+
+        <div class="skill-card">
+
+          <h3 class="skill-card__category">Cloud, AI &amp; Tools</h3>
+
+          <ul class="skill-card__list">
+
+            <li>Git / GitHub</li>
+
+            <li>Docker</li>
+
+            <li>CI/CD Pipelines</li>
+
+            <li>Microsoft Azure</li>
+
+            <li>Azure OpenAI</li>
+
+            <li>Prompt Engineering</li>
+
+            <li>AI Agents</li>
+
+            <li>DevOps</li>
+
+            <li>VS Code</li>
+
+          </ul>
+
+        </div>
+
+ 
+
+      </div>
+
+    </div>
+
+  </section>
+
+ 
+
+  <!-- ── Experience ── -->
+
+  <section class="section" id="experience">
+
+    <div class="container">
+
+      <h2 class="section__title">Work <span>Experience</span></h2>
+
+      <div class="timeline">
+
+ 
+
+        <div class="timeline__item">
+
+          <div class="timeline__dot"></div>
+
+          <div class="timeline__card">
+
+            <span class="timeline__date">Aug 2022 – Present</span>
+
+            <h3 class="timeline__role">Packaged App Development Associate</h3>
+
+            <p class="timeline__company">Accenture Inc.</p>
+
+            <p class="timeline__desc">
+
+              Application development, maintenance, and support. SQL development and troubleshooting.
+
+              Web application enhancement and testing. Technical documentation and knowledge transfer.
+
+              Azure DevOps and CI/CD pipeline support. Feature Flag assessments and POCs using
+
+              LaunchDarkly &amp; Datadog. Defect analysis, issue resolution, and cross-functional
+
+              team collaboration.
+
+            </p>
+
+          </div>
+
+        </div>
+
+ 
+
+        <div class="timeline__item">
+
+          <div class="timeline__dot"></div>
+
+          <div class="timeline__card">
+
+            <span class="timeline__date">Graduated June 2022</span>
+
+            <h3 class="timeline__role">Bachelor of Science in Information Technology</h3>
+
+            <p class="timeline__company">Occidental Mindoro State University</p>
+
+            <p class="timeline__desc">
+
+              Focused on software engineering, web technologies, and information systems.
+
+            </p>
+
+          </div>
+
+        </div>
+
+ 
+
+      </div>
+
+    </div>
+
+  </section>
+
+ 
+
+  <!-- ── Projects ── -->
+
+  <section class="section section--alt" id="projects">
+
+    <div class="container">
+
+      <h2 class="section__title">Featured <span>Projects</span></h2>
+
+      <div class="projects__grid">
+
+ 
+
+        <article class="project-card">
+
+          <div class="project-card__header">
+
+            <span class="project-card__icon">&#128187;</span>
+
+          </div>
+
+          <h3 class="project-card__title">Scheduling Service</h3>
+
+          <p class="project-card__desc">
+
+            Web application maintenance and enhancement project involving application support,
+
+            version upgrades, technical documentation, and issue resolution.
+
+          </p>
+
+          <ul class="project-card__tags">
+
+            <li>HTML</li><li>CSS</li><li>JavaScript</li><li>SQL</li><li>Azure</li>
+
+          </ul>
+
+        </article>
+
+ 
+
+        <article class="project-card">
+
+          <div class="project-card__header">
+
+            <span class="project-card__icon">&#128681;</span>
+
+          </div>
+
+          <h3 class="project-card__title">LaunchDarkly Feature Flag Management &amp; Monitoring</h3>
+
+          <p class="project-card__desc">
+
+            Implemented and evaluated LaunchDarkly feature flags, including flag creation, rollout
+
+            strategies, kill switches, SDK integration, and application configuration management.
+
+            Supported feature governance and monitored feature flag usage across applications to
+
+            ensure controlled releases and operational visibility.
+
+          </p>
+
+          <ul class="project-card__tags">
+
+            <li>LaunchDarkly</li><li>JavaScript</li><li>Angular</li><li>OpenFeature</li>
+
+          </ul>
+
+        </article>
+
+ 
+
+        <article class="project-card">
+
+          <div class="project-card__header">
+
+            <span class="project-card__icon">&#128202;</span>
+
+          </div>
+
+          <h3 class="project-card__title">Datadog Feature Flags Assessment</h3>
+
+          <p class="project-card__desc">
+
+            Evaluated Datadog Feature Flags through hands-on implementation, testing, monitoring
+
+            integration, and feature rollout demonstrations.
+
+          </p>
+
+          <ul class="project-card__tags">
+
+            <li>Datadog</li><li>TypeScript</li><li>Angular</li><li>RUM</li>
+
+          </ul>
+
+        </article>
+
+ 
+
+        <article class="project-card">
+
+          <div class="project-card__header">
+
+            <span class="project-card__icon">&#128274;</span>
+
+          </div>
+
+          <h3 class="project-card__title">Session Timeout Enhancement</h3>
+
+          <p class="project-card__desc">
+
+            Implemented automatic session timeout functionality to improve application security
+
+            and user session management. Feature behavior was controlled through configurable
+
+            feature flags for safer deployment.
+
+          </p>
+
+          <ul class="project-card__tags">
+
+            <li>Angular</li><li>TypeScript</li><li>Feature Flags</li>
+
+          </ul>
+
+        </article>
+
+ 
+
+        <article class="project-card">
+
+          <div class="project-card__header">
+
+            <span class="project-card__icon">&#128640;</span>
+
+          </div>
+
+          <h3 class="project-card__title">Application Deployment &amp; Troubleshooting</h3>
+
+          <p class="project-card__desc">
+
+            Supported application deployment, configuration, and issue resolution activities,
+
+            including environment setup, dependency management, and debugging deployment-related issues.
+
+          </p>
+
+          <ul class="project-card__tags">
+
+            <li>Node.js</li><li>Git</li><li>Azure DevOps</li><li>VS Code</li>
+
+          </ul>
+
+        </article>
+
+ 
+
+        <article class="project-card">
+
+          <div class="project-card__header">
+
+            <span class="project-card__icon">&#128203;</span>
+
+          </div>
+
+          <h3 class="project-card__title">Vulnerability Remediation Initiative</h3>
+
+          <p class="project-card__desc">
+
+            Participated in security enhancement activities by addressing application vulnerabilities,
+
+            implementing recommended fixes, and validating remediation results.
+
+          </p>
+
+          <ul class="project-card__tags">
+
+            <li>Angular</li><li>TypeScript</li><li>Security Best Practices</li>
+
+          </ul>
+
+        </article>
+
+ 
+
+      </div>
+
+    </div>
+
+  </section>
+
+ 
+
+  <!-- ── Contact ── -->
+
+  <section class="section" id="contact">
+
+    <div class="container">
+
+      <h2 class="section__title">Get In <span>Touch</span></h2>
+
+      <p class="contact__subtitle">
+
+        Available for freelance projects, professional collaborations, and technical opportunities.
+
+      </p>
+
+      <div class="contact__social">
+
+        <a href="mailto:lairahipolito05@gmail.com" class="social-link">
+          <span class="social-link__label">Email</span>
+          <span class="social-link__value">lairahipolito05@gmail.com</span>
+        </a>
+
+        <a href="tel:+639638480444" class="social-link">
+          <span class="social-link__label">Phone</span>
+          <span class="social-link__value">+63 963 848 0444</span>
+        </a>
+
+      </div>
+
+    </div>
+
+  </section>
+
+ 
+
+  <!-- ── Footer ── -->
+
+  <footer class="footer">
+
+    <p>&copy; <span id="year"></span> Laira T. Hipolito. All rights reserved.</p>
+
+  </footer>
+
+ 
+
+  <script src="js/main.js"></script>
+
+</body>
+
+</html>

@@ -1,0 +1,1251 @@
+<!DOCTYPE html>
+
+<html lang="en">
+
+<head>
+
+  <meta charset="UTF-8" />
+
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+
+  <title>CV – Laira T. Hipolito</title>
+
+  <link rel="preconnect" href="https://fonts.googleapis.com" />
+
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+
+  <link href="https://fonts.googleapis.com/css2?family=Inter:wght@300;400;500;600;700&family=Fira+Code:wght@400;500&display=swap" rel="stylesheet" />
+
+  <script src="https://unpkg.com/html2pdf.js@0.10.1/dist/html2pdf.bundle.min.js"></script>
+
+  <style>
+
+    /* ── Variables ── */
+
+    :root {
+
+      --clr-bg:      #0e0b1a;
+
+      --clr-surface: #1c1630;
+
+      --clr-border:  #2a2a3a;
+
+      --clr-accent:  #7c6af7;
+
+      --clr-accent2: #56cfad;
+
+      --clr-text:    #e2e2ef;
+
+      --clr-muted:   #8888aa;
+
+      --font-sans:   'Inter', sans-serif;
+
+      --font-mono:   'Fira Code', monospace;
+
+    }
+
+ 
+
+    *, *::before, *::after { box-sizing: border-box; margin: 0; padding: 0; }
+
+    html { scroll-behavior: smooth; }
+
+ 
+
+    body {
+
+      background: var(--clr-bg);
+
+      color: var(--clr-text);
+
+      font-family: var(--font-sans);
+
+      font-size: 0.82rem;
+
+      line-height: 1.5;
+
+      -webkit-font-smoothing: antialiased;
+
+      padding: 1.5rem 1rem 3rem;
+
+    }
+
+ 
+
+    a { color: var(--clr-accent); text-decoration: none; }
+
+    a:hover { text-decoration: underline; }
+
+    ul { list-style: none; padding: 0; }
+
+ 
+
+    /* ── Layout ── */
+
+    .cv {
+
+      max-width: 820px;
+
+      margin-inline: auto;
+
+      background: var(--clr-surface);
+
+      border: 1px solid var(--clr-border);
+
+      border-radius: 16px;
+
+      overflow: hidden;
+
+    }
+
+ 
+
+    /* ── Header ── */
+
+    .cv__header {
+
+      background: linear-gradient(135deg, #1c1630 0%, #12102a 100%);
+
+      border-bottom: 2px solid var(--clr-accent);
+
+      padding: 1.25rem 1.75rem 1rem;
+
+    }
+
+ 
+
+    .cv__header-top {
+
+      display: flex;
+
+      align-items: center;
+
+      gap: 1rem;
+
+      margin-bottom: 0.5rem;
+
+    }
+
+ 
+
+    .cv__photo {
+
+      width: 70px;
+
+      height: 70px;
+
+      border-radius: 50%;
+
+      object-fit: cover;
+
+      object-position: top center;
+
+      border: 2px solid var(--clr-accent);
+
+      flex-shrink: 0;
+
+    }
+
+ 
+
+    .cv__name {
+
+      font-size: clamp(1.4rem, 3vw, 2rem);
+
+      font-weight: 700;
+
+      letter-spacing: -0.02em;
+
+      color: #fff;
+
+    }
+
+ 
+
+    .cv__role {
+
+      font-size: 0.82rem;
+
+      color: var(--clr-accent);
+
+      font-family: var(--font-mono);
+
+      margin-top: 0.15rem;
+
+    }
+
+ 
+
+    .cv__objective {
+
+      margin-top: 0.5rem;
+
+      color: var(--clr-muted);
+
+      max-width: 620px;
+
+      font-size: 0.75rem;
+
+    }
+
+ 
+
+    .cv__contacts {
+
+      display: flex;
+
+      flex-wrap: wrap;
+
+      gap: 0.35rem 1rem;
+
+      margin-top: 0.6rem;
+
+    }
+
+ 
+
+    .cv__contact-item {
+
+      display: flex;
+
+      align-items: center;
+
+      gap: 0.35rem;
+
+      font-size: 0.72rem;
+
+      color: var(--clr-muted);
+
+    }
+
+ 
+
+    .cv__contact-item svg {
+
+      flex-shrink: 0;
+
+      width: 14px;
+
+      height: 14px;
+
+      fill: var(--clr-accent);
+
+    }
+
+ 
+
+    .cv__contact-item a { color: var(--clr-muted); }
+
+    .cv__contact-item a:hover { color: var(--clr-accent); }
+
+ 
+
+    /* ── Body ── */
+
+    .cv__body {
+
+      display: grid;
+
+      grid-template-columns: 1fr 220px;
+
+      gap: 0;
+
+    }
+
+ 
+
+    .cv__main {
+
+      padding: 1rem 1.5rem;
+
+      border-right: 1px solid var(--clr-border);
+
+    }
+
+ 
+
+    .cv__aside {
+
+      padding: 1rem 1.25rem;
+
+    }
+
+ 
+
+    /* ── Section ── */
+
+    .cv-section { margin-bottom: 0.9rem; }
+
+ 
+
+    .cv-section__title {
+
+      font-size: 0.65rem;
+
+      font-weight: 700;
+
+      text-transform: uppercase;
+
+      letter-spacing: 0.12em;
+
+      color: var(--clr-accent);
+
+      border-bottom: 1px solid var(--clr-border);
+
+      padding-bottom: 0.3rem;
+
+      margin-bottom: 0.6rem;
+
+    }
+
+ 
+
+    /* ── Experience ── */
+
+    .exp-entry { margin-bottom: 0.75rem; }
+
+    .exp-entry:last-child { margin-bottom: 0; }
+
+ 
+
+    .exp-entry__header {
+
+      display: flex;
+
+      justify-content: space-between;
+
+      align-items: flex-start;
+
+      flex-wrap: wrap;
+
+      gap: 0.2rem;
+
+    }
+
+ 
+
+    .exp-entry__company {
+
+      font-size: 0.85rem;
+
+      font-weight: 600;
+
+      color: #fff;
+
+    }
+
+ 
+
+    .exp-entry__dates {
+
+      font-size: 0.7rem;
+
+      font-family: var(--font-mono);
+
+      color: var(--clr-accent2);
+
+      white-space: nowrap;
+
+    }
+
+ 
+
+    .exp-entry__role {
+
+      font-size: 0.78rem;
+
+      color: var(--clr-accent);
+
+      margin-bottom: 0.3rem;
+
+    }
+
+ 
+
+    .exp-entry__list {
+
+      padding-left: 1rem;
+
+      list-style: disc;
+
+      color: var(--clr-muted);
+
+      font-size: 0.75rem;
+
+    }
+
+ 
+
+    .exp-entry__list li { margin-bottom: 0.1rem; }
+
+ 
+
+    /* ── Education ── */
+
+    .edu-entry__degree {
+
+      font-weight: 600;
+
+      color: #fff;
+
+      font-size: 0.82rem;
+
+    }
+
+ 
+
+    .edu-entry__school {
+
+      color: var(--clr-accent);
+
+      font-size: 0.75rem;
+
+    }
+
+ 
+
+    .edu-entry__year {
+
+      font-size: 0.7rem;
+
+      color: var(--clr-muted);
+
+      font-family: var(--font-mono);
+
+    }
+
+ 
+
+    /* ── Skills (aside) ── */
+
+    .skill-group { margin-bottom: 0.6rem; }
+
+ 
+
+    .skill-group__label {
+
+      font-size: 0.72rem;
+
+      font-weight: 600;
+
+      color: var(--clr-text);
+
+      margin-bottom: 0.3rem;
+
+    }
+
+ 
+
+    .skill-tags {
+
+      display: flex;
+
+      flex-wrap: wrap;
+
+      gap: 0.25rem;
+
+    }
+
+ 
+
+    .skill-tag {
+
+      background: rgba(124, 106, 247, 0.12);
+
+      border: 1px solid rgba(124, 106, 247, 0.3);
+
+      color: var(--clr-accent);
+
+      font-size: 0.65rem;
+
+      font-family: var(--font-mono);
+
+      padding: 0.15rem 0.4rem;
+
+      border-radius: 4px;
+
+    }
+
+ 
+
+    /* ── Certifications ── */
+
+    .cert-item {
+
+      display: flex;
+
+      align-items: flex-start;
+
+      gap: 0.4rem;
+
+      font-size: 0.75rem;
+
+      color: var(--clr-muted);
+
+      margin-bottom: 0.3rem;
+
+    }
+
+ 
+
+    .cert-item::before {
+
+      content: '▸';
+
+      color: var(--clr-accent2);
+
+      flex-shrink: 0;
+
+      margin-top: 0.05rem;
+
+    }
+
+ 
+
+    /* ── Hobbies ── */
+
+    .hobby-list {
+
+      display: flex;
+
+      flex-wrap: wrap;
+
+      gap: 0.4rem;
+
+    }
+
+ 
+
+    .hobby-tag {
+
+      background: rgba(86, 207, 173, 0.1);
+
+      border: 1px solid rgba(86, 207, 173, 0.25);
+
+      color: var(--clr-accent2);
+
+      font-size: 0.75rem;
+
+      padding: 0.2rem 0.55rem;
+
+      border-radius: 4px;
+
+    }
+
+ 
+
+    /* ── Top action bar ── */
+
+    .action-bar {
+
+      display: flex;
+
+      justify-content: space-between;
+
+      align-items: center;
+
+      max-width: 820px;
+
+      margin: 0 auto 1rem;
+
+      flex-wrap: wrap;
+
+      gap: 0.5rem;
+
+    }
+
+ 
+
+    .action-bar a {
+
+      font-size: 0.85rem;
+
+      color: var(--clr-muted);
+
+      display: flex;
+
+      align-items: center;
+
+      gap: 0.35rem;
+
+    }
+
+ 
+
+    .action-bar a:hover { color: var(--clr-accent); }
+
+ 
+
+    .btn-print {
+
+      background: var(--clr-accent);
+
+      color: #fff;
+
+      border: none;
+
+      border-radius: 8px;
+
+      padding: 0.5rem 1.1rem;
+
+      font-size: 0.85rem;
+
+      font-family: var(--font-sans);
+
+      font-weight: 600;
+
+      cursor: pointer;
+
+      display: flex;
+
+      align-items: center;
+
+      gap: 0.4rem;
+
+      transition: opacity 0.2s;
+
+    }
+
+ 
+
+    .btn-print:hover { opacity: 0.85; }
+
+ 
+
+    /* ── Responsive ── */
+
+    @media (max-width: 640px) {
+
+      .cv__body {
+
+        grid-template-columns: 1fr;
+
+      }
+
+ 
+
+      .cv__main {
+
+        border-right: none;
+
+        border-bottom: 1px solid var(--clr-border);
+
+        padding: 1.5rem;
+
+      }
+
+ 
+
+      .cv__aside { padding: 1.5rem; }
+
+      .cv__header { padding: 1.75rem 1.5rem 1.5rem; }
+
+    }
+
+ 
+
+    /* ── Print ── */
+
+    @media print {
+
+      body {
+
+        background: #fff;
+
+        color: #1a1a2e;
+
+        padding: 0;
+
+        font-size: 9pt;
+
+      }
+
+ 
+
+      .action-bar { display: none; }
+
+ 
+
+      .cv {
+
+        max-width: 100%;
+
+        border: none;
+
+        border-radius: 0;
+
+        background: #fff;
+
+      }
+
+ 
+
+      .cv__header {
+
+        background: #f4f2ff;
+
+        border-bottom: 2px solid #7c6af7;
+
+        padding: 1.5rem 2rem 1.2rem;
+
+      }
+
+ 
+
+      .cv__name { color: #1a1a2e; font-size: 22pt; }
+
+      .cv__photo { border-color: #7c6af7; }
+
+      .cv__role { color: #7c6af7; }
+
+      .cv__objective { color: #555; }
+
+      .cv__contact-item { color: #555; }
+
+      .cv__contact-item a { color: #555; }
+
+ 
+
+      .cv__main { padding: 1.2rem 2rem; border-right: 1px solid #ddd; }
+
+      .cv__aside { padding: 1.2rem 1.5rem; }
+
+ 
+
+      .cv-section__title { color: #7c6af7; border-bottom-color: #ddd; }
+
+ 
+
+      .exp-entry__company { color: #1a1a2e; }
+
+      .exp-entry__role { color: #7c6af7; }
+
+      .exp-entry__dates { color: #56cfad; }
+
+      .exp-entry__list { color: #444; }
+
+ 
+
+      .edu-entry__degree { color: #1a1a2e; }
+
+      .edu-entry__school { color: #7c6af7; }
+
+      .edu-entry__year { color: #555; }
+
+ 
+
+      .skill-tag {
+
+        background: #f4f2ff;
+
+        border-color: #c4bbff;
+
+        color: #5a4ec7;
+
+      }
+
+ 
+
+      .skill-group__label { color: #1a1a2e; }
+
+      .cert-item { color: #444; }
+
+      .cert-item::before { color: #56cfad; }
+
+ 
+
+      .hobby-tag {
+
+        background: #f0fdf9;
+
+        border-color: #a5e8d8;
+
+        color: #2a8c72;
+
+      }
+
+ 
+
+      a { text-decoration: none; }
+
+    }
+
+  </style>
+
+</head>
+
+<body>
+
+ 
+
+  <!-- ── Action Bar ── -->
+
+  <div class="action-bar">
+
+    <a href="index.html">
+
+      <svg viewBox="0 0 24 24" width="14" height="14" fill="currentColor"><path d="M20 11H7.83l5.59-5.59L12 4l-8 8 8 8 1.41-1.41L7.83 13H20v-2z"/></svg>
+
+      Back to Portfolio
+
+    </a>
+
+    <button class="btn-print" id="downloadBtn" onclick="downloadPDF()">
+
+      <svg viewBox="0 0 24 24" width="14" height="14" fill="currentColor"><path d="M19 9h-4V3H9v6H5l7 7 7-7zm-8 2V5h2v6h1.17L12 13.17 9.83 11H11zm-6 7h14v2H5v-2z"/></svg>
+
+      Download PDF
+
+    </button>
+
+  </div>
+
+ 
+
+  <!-- ── CV Card ── -->
+
+  <div class="cv">
+
+ 
+
+    <!-- Header -->
+
+    <header class="cv__header">
+
+      <div class="cv__header-top">
+
+        <img src="images/profile.png" alt="Laira T. Hipolito" class="cv__photo" />
+
+        <div>
+
+          <h1 class="cv__name">Laira T. Hipolito</h1>
+
+      <p class="cv__role">Packaged App Development Associate · Full Stack Developer</p>
+
+      <p class="cv__objective">
+
+        To build a successful career in software development by leveraging my experience in
+
+        web applications, SQL, and modern development tools while continuously learning new
+
+        technologies and delivering high-quality solutions.
+
+      </p>
+
+        </div>
+
+      </div>
+
+      <div class="cv__contacts">
+
+        <!-- Email -->
+
+        <span class="cv__contact-item">
+
+          <svg viewBox="0 0 24 24"><path d="M20 4H4c-1.1 0-2 .9-2 2v12c0 1.1.9 2 2 2h16c1.1 0 2-.9 2-2V6c0-1.1-.9-2-2-2zm0 4l-8 5-8-5V6l8 5 8-5v2z"/></svg>
+
+          <a href="mailto:lairahipolito05@gmail.com">lairahipolito05@gmail.com</a>
+
+        </span>
+
+        <!-- Phone -->
+
+        <span class="cv__contact-item">
+
+          <svg viewBox="0 0 24 24"><path d="M6.62 10.79a15.05 15.05 0 0 0 6.59 6.59l2.2-2.2c.27-.27.67-.36 1.02-.24 1.12.37 2.33.57 3.57.57.55 0 1 .45 1 1V20c0 .55-.45 1-1 1-9.39 0-17-7.61-17-17 0-.55.45-1 1-1h3.5c.55 0 1 .45 1 1 0 1.25.2 2.45.57 3.57.11.35.03.74-.25 1.02l-2.2 2.2z"/></svg>
+
+          <a href="tel:+639638480444">+63 963 848 0444</a>
+
+        </span>
+
+        <!-- Location -->
+
+        <span class="cv__contact-item">
+
+          <svg viewBox="0 0 24 24"><path d="M12 2C8.13 2 5 5.13 5 9c0 5.25 7 13 7 13s7-7.75 7-13c0-3.87-3.13-7-7-7zm0 9.5c-1.38 0-2.5-1.12-2.5-2.5S10.62 6.5 12 6.5s2.5 1.12 2.5 2.5S13.38 11.5 12 11.5z"/></svg>
+
+          Poblacion, Sablayan, Occidental Mindoro
+
+        </span>
+
+        <!-- LinkedIn -->
+
+        <span class="cv__contact-item">
+
+          <svg viewBox="0 0 24 24"><path d="M19 3A2 2 0 0 1 21 5V19A2 2 0 0 1 19 21H5A2 2 0 0 1 3 19V5A2 2 0 0 1 5 3H19M18.5 18.5V13.2A3.26 3.26 0 0 0 15.24 9.94C14.39 9.94 13.4 10.46 12.92 11.24V10.13H10.13V18.5H12.92V13.57A1.46 1.46 0 0 1 14.38 12.11A1.46 1.46 0 0 1 15.84 13.57V18.5H18.5M6.88 8.56A1.68 1.68 0 0 0 8.56 6.88C8.56 5.95 7.81 5.19 6.88 5.19A1.69 1.69 0 0 0 5.19 6.88C5.19 7.81 5.95 8.56 6.88 8.56M8.27 18.5V10.13H5.5V18.5H8.27Z"/></svg>
+
+          <a href="https://www.linkedin.com/in/laira-m-tardio-357b44247" target="_blank" rel="noopener">linkedin.com/in/laira-m-tardio</a>
+
+        </span>
+
+        <!-- GitHub -->
+
+        <span class="cv__contact-item">
+
+          <svg viewBox="0 0 24 24"><path d="M12 2A10 10 0 0 0 2 12c0 4.42 2.87 8.17 6.84 9.5.5.08.66-.23.66-.5v-1.69c-2.77.6-3.36-1.34-3.36-1.34-.46-1.16-1.11-1.47-1.11-1.47-.91-.62.07-.6.07-.6 1 .07 1.53 1.03 1.53 1.03.87 1.52 2.34 1.07 2.91.83.09-.65.35-1.09.63-1.34-2.22-.25-4.55-1.11-4.55-4.92 0-1.11.38-2 1.03-2.71-.1-.25-.45-1.29.1-2.64 0 0 .84-.27 2.75 1.02.79-.22 1.65-.33 2.5-.33.85 0 1.71.11 2.5.33 1.91-1.29 2.75-1.02 2.75-1.02.55 1.35.2 2.39.1 2.64.65.71 1.03 1.6 1.03 2.71 0 3.82-2.34 4.66-4.57 4.91.36.31.69.92.69 1.85V21c0 .27.16.59.67.5C19.14 20.16 22 16.42 22 12A10 10 0 0 0 12 2z"/></svg>
+
+          <a href="https://github.com/lairahipolito05" target="_blank" rel="noopener">github.com/lairahipolito05</a>
+
+        </span>
+
+      </div>
+
+    </header>
+
+ 
+
+    <!-- Body: Main + Aside -->
+
+    <div class="cv__body">
+
+ 
+
+      <!-- ── Main Column ── -->
+
+      <main class="cv__main">
+
+ 
+
+        <!-- Experience -->
+
+        <section class="cv-section">
+
+          <h2 class="cv-section__title">Work Experience</h2>
+
+ 
+
+          <div class="exp-entry">
+
+            <div class="exp-entry__header">
+
+              <span class="exp-entry__company">Accenture Inc.</span>
+
+              <span class="exp-entry__dates">Aug 2022 – Present</span>
+
+            </div>
+
+            <p class="exp-entry__role">Packaged App Development Associate</p>
+
+            <ul class="exp-entry__list">
+
+              <li>Application development, maintenance, and support</li>
+
+              <li>SQL development and troubleshooting</li>
+
+              <li>Web application enhancement and testing</li>
+
+              <li>Exploring Generative AI, Azure OpenAI, prompt engineering, and AI agent workflows for practical solutions</li>
+
+              <li>Technical documentation and knowledge transfer</li>
+
+              <li>Azure DevOps and CI/CD pipeline support</li>
+
+              <li>Feature Flag assessments and POCs using LaunchDarkly &amp; Datadog</li>
+
+              <li>Defect analysis and issue resolution</li>
+
+              <li>Cross-functional team collaboration</li>
+
+            </ul>
+
+          </div>
+
+        </section>
+
+ 
+
+        <!-- Education -->
+
+        <section class="cv-section">
+
+          <h2 class="cv-section__title">Education</h2>
+
+          <div class="edu-entry">
+
+            <p class="edu-entry__degree">Bachelor of Science in Information Technology</p>
+
+            <p class="edu-entry__school">Occidental Mindoro State University</p>
+
+            <p class="edu-entry__year">Graduated June 2022</p>
+
+          </div>
+
+        </section>
+
+ 
+
+        <!-- Certifications -->
+
+        <section class="cv-section">
+
+          <h2 class="cv-section__title">Certifications</h2>
+
+          <div class="cert-item">Microsoft Azure Fundamentals (AZ-900)</div>
+
+          <div class="cert-item">Microsoft Azure Data Fundamentals (DP-900)</div>
+
+        </section>
+
+ 
+
+      </main>
+
+ 
+
+      <!-- ── Aside Column ── -->
+
+      <aside class="cv__aside">
+
+ 
+
+        <!-- Languages & Core -->
+
+        <section class="cv-section">
+
+          <h2 class="cv-section__title">Languages</h2>
+
+          <div class="skill-group">
+
+            <div class="skill-tags">
+
+              <span class="skill-tag">JavaScript</span>
+
+              <span class="skill-tag">TypeScript</span>
+
+              <span class="skill-tag">SQL</span>
+
+              <span class="skill-tag">HTML</span>
+
+              <span class="skill-tag">CSS</span>
+
+            </div>
+
+          </div>
+
+        </section>
+
+ 
+
+        <!-- Frameworks -->
+
+        <section class="cv-section">
+
+          <h2 class="cv-section__title">Frameworks</h2>
+
+          <div class="skill-group">
+
+            <div class="skill-tags">
+
+              <span class="skill-tag">Angular</span>
+
+              <span class="skill-tag">Node.js</span>
+
+              <span class="skill-tag">Express.js</span>
+
+            </div>
+
+          </div>
+
+        </section>
+
+ 
+
+        <!-- Cloud & DevOps -->
+
+        <section class="cv-section">
+
+          <h2 class="cv-section__title">Cloud & DevOps</h2>
+
+          <div class="skill-group">
+
+            <div class="skill-tags">
+
+              <span class="skill-tag">Microsoft Azure</span>
+
+              <span class="skill-tag">Azure OpenAI</span>
+
+              <span class="skill-tag">Azure DevOps</span>
+
+              <span class="skill-tag">GenAI</span>
+
+              <span class="skill-tag">Prompt Engineering</span>
+
+              <span class="skill-tag">AI Agents</span>
+
+              <span class="skill-tag">DevOps</span>
+
+              <span class="skill-tag">Git</span>
+
+              <span class="skill-tag">GitHub</span>
+
+              <span class="skill-tag">CI/CD</span>
+
+            </div>
+
+          </div>
+
+        </section>
+
+ 
+
+        <!-- Feature Management -->
+
+        <section class="cv-section">
+
+          <h2 class="cv-section__title">Feature Management</h2>
+
+          <div class="skill-group">
+
+            <div class="skill-tags">
+
+              <span class="skill-tag">LaunchDarkly</span>
+
+              <span class="skill-tag">Datadog</span>
+
+              <span class="skill-tag">Feature Flags</span>
+
+              <span class="skill-tag">OpenFeature SDK</span>
+
+              <span class="skill-tag">Datadog RUM</span>
+
+            </div>
+
+          </div>
+
+        </section>
+
+ 
+
+        <!-- Tools -->
+
+        <section class="cv-section">
+
+          <h2 class="cv-section__title">Tools</h2>
+
+          <div class="skill-group">
+
+            <div class="skill-tags">
+
+              <span class="skill-tag">VS Code</span>
+
+              <span class="skill-tag">REST APIs</span>
+
+            </div>
+
+          </div>
+
+        </section>
+
+ 
+
+      </aside>
+
+    </div><!-- /.cv__body -->
+
+  </div><!-- /.cv -->
+
+ 
+
+  <script>
+
+    function downloadPDF() {
+
+      if (typeof html2pdf === 'undefined') {
+
+        alert('PDF library failed to load. Please check your internet connection and try again.');
+
+        return;
+
+      }
+
+ 
+
+      const btn = document.getElementById('downloadBtn');
+
+      btn.textContent = 'Generating…';
+
+      btn.disabled = true;
+
+ 
+
+      const actionBar = document.querySelector('.action-bar');
+
+      actionBar.style.display = 'none';
+
+ 
+
+      const element = document.querySelector('.cv');
+
+ 
+
+      // Temporarily remove border-radius so corners don't leave gaps
+
+      const origRadius = element.style.borderRadius;
+
+      element.style.borderRadius = '0';
+
+ 
+
+      // Calculate exact height so PDF has no blank space
+
+      const pdfWidth = 210; // A4 width in mm
+
+      const pdfHeight = Math.ceil((element.offsetHeight / element.offsetWidth) * pdfWidth) + 2;
+
+ 
+
+      const opt = {
+
+        margin:      0,
+
+        filename:    'Laira-Hipolito-CV.pdf',
+
+        image:       { type: 'jpeg', quality: 0.98 },
+
+        html2canvas: { scale: 2, useCORS: true, logging: false, allowTaint: true, backgroundColor: '#1c1630' },
+
+        jsPDF:       { unit: 'mm', format: [pdfWidth, pdfHeight], orientation: 'portrait' }
+
+      };
+
+ 
+
+      html2pdf().set(opt).from(element).save()
+
+        .then(() => {
+
+          element.style.borderRadius = origRadius;
+
+          actionBar.style.display = '';
+
+          btn.innerHTML = '<svg viewBox="0 0 24 24" width="14" height="14" fill="currentColor"><path d="M19 9h-4V3H9v6H5l7 7 7-7zm-8 2V5h2v6h1.17L12 13.17 9.83 11H11zm-6 7h14v2H5v-2z"/></svg> Download PDF';
+
+          btn.disabled = false;
+
+        })
+
+        .catch((err) => {
+
+          console.error('PDF generation failed:', err);
+
+          element.style.borderRadius = origRadius;
+
+          actionBar.style.display = '';
+
+          alert('Could not generate PDF. Try using Ctrl+P → Save as PDF instead.');
+
+          btn.innerHTML = '<svg viewBox="0 0 24 24" width="14" height="14" fill="currentColor"><path d="M19 9h-4V3H9v6H5l7 7 7-7zm-8 2V5h2v6h1.17L12 13.17 9.83 11H11zm-6 7h14v2H5v-2z"/></svg> Download PDF';
+
+          btn.disabled = false;
+
+        });
+
+    }
+
+  </script>
+
+ 
+
+</body>
+
+</html>
