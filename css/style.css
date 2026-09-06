@@ -950,6 +950,16 @@ img { display: block; max-width: 100%; }
 
 }
 
+.project-card__role {
+  color: var(--clr-accent-2);
+  font-family: var(--font-mono);
+  font-size: 0.78rem;
+  font-weight: 500;
+  letter-spacing: 0.04em;
+  margin-top: 1rem;
+  text-transform: uppercase;
+}
+
  
 
 .project-card__tags {
@@ -1199,6 +1209,7 @@ img { display: block; max-width: 100%; }
   font-size: 0.95rem;
 
   color: inherit;
+}
 
 .footer {
 
